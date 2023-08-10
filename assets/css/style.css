@@ -7,6 +7,7 @@
 
 html {
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .clear {
@@ -151,19 +152,17 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn,
 #header .search-button {
     float: right;
     padding: 0 24px;
+    color: #fff;
+    line-height: 46px;
 }
 
 #header .search-button:hover {
     background-color: rgb(250,82,49);
     cursor: pointer;
-}
-
-#header .search-icon {
-    color: #fff;
-    line-height: 46px;
 }
 
 #slider {
@@ -202,8 +201,9 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 64px 0;
+    padding: 64px 16px;
     padding-bottom: 116px;
 }
 

@@ -1,0 +1,29 @@
+/* PC */
+@media (min-width: 1024px) {
+    
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Media */
+@media (max-width: 739px) {
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search-button {
+        display: none;
+    }
+
+    #header .mobile-menu-btn:hover {
+        background-color: #ccc;
+        color: #000;
+    }
+
+    #nav li {
+        display: block;
+    }
+}
