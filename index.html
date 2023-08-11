@@ -65,17 +65,17 @@
                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             
                 <div class="member-list">
-                    <div class="text-center col-third col">
+                    <div class="text-center col-third col s-col-full mt-32">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/bandmember.jpg" alt="Name" class="member-avatar">
                     </div>
 
-                    <div class="text-center col-third col">
+                    <div class="text-center col-third col s-col-full mt-32">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/bandmember.jpg" alt="Name" class="member-avatar">
                     </div>
 
-                    <div class="text-center col-third col">
+                    <div class="text-center col-third col s-col-full mt-32">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/bandmember.jpg" alt="Name" class="member-avatar">
                     </div>
@@ -99,7 +99,7 @@
 
                     <!-- Place -->
                     <div class="row place-list">
-                        <div class="col-third col">
+                        <div class="col-third col mt-16 s-col-full">
                             <img src="./assets/img/places/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -109,7 +109,7 @@
                             </div>
                         </div>
 
-                        <div class="col-third col">
+                        <div class="col-third col mt-16 s-col-full">
                             <img src="./assets/img/places/paris.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
@@ -119,7 +119,7 @@
                             </div>
                         </div>
 
-                        <div class="col-third col">
+                        <div class="col-third col mt-16 s-col-full">
                             <img src="./assets/img/places/sanfran.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
@@ -219,7 +219,12 @@
             var menuItem = menuItems[i];
             
             menuItem.onclick = function() {
-                header.style.height = null;
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
             }
         }
     </script>
